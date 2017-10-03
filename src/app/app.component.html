@@ -8,8 +8,10 @@
   <button class="btn btn-primary btn-block" (click)="addNote()">Nueva Nota</button>
 </div>
 <div class="col-sm-6" *ngIf="showForm">
-  <input type="text" [(ngModel)]="nota.titulo" placeholder="Titulo de la nota"/>
+  <input type="text" [(ngModel)]="nota.titulo" placeholder="Titulo de la nota" />
   <textarea class="form-control" [(ngModel)]="nota.descripcion"></textarea>
   <button (click)="eliminarNota()" class="btn btn-danger">Eliminar Nota</button>
   <button (click)="guardarNota()" class="btn btn-primary">Guardar Nota</button>
 </div>
+
+<app-usuarios></app-usuarios>
