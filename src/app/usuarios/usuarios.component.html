@@ -1,7 +1,12 @@
-<p>
-  usuarios works!
-</p>
-<div class="col-sm-12">
-  <usuarios-listar></usuarios-listar>
-  <usuarios-detallar></usuarios-detallar>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Administración de usuarios</h3> </div>
+  <div class="panel-body">
+    <div class="col-sm-12">
+      <button class="btn btn-primary pull-right btn-separated" (click)="nuevo()">Nuevo</button>
+      <button class="btn btn-default pull-right btn-separated" (click)="listar()">Listar</button>
+    </div>
+    <usuarios-listar (seleccionarUsuario)="seleccionarUsuario($event)" [verDetalle]="verDetalle" #ul></usuarios-listar>
+    <usuarios-detallar (listar)="listar()" [usuario]="usuario" *ngIf="verDetalle === true" #ud></usuarios-detallar>
+  </div>
 </div>

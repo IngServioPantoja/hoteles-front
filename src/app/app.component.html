@@ -1,12 +1,3 @@
-<div class="col-sm-6">
-  Listado de notas
-  <ul class="list-group">
-    <li class="list-group-item" *ngFor="let n of my_notes" (click)="verNota(n)">
-      {{n.id}} - {{n.titulo}} - {{n.descripcion}}
-    </li>
-  </ul>
-  <button class="btn btn-primary btn-block" (click)="addNote()">Nueva Nota</button>
-</div>
 <div class="col-sm-6" *ngIf="showForm">
   <input type="text" [(ngModel)]="nota.titulo" placeholder="Titulo de la nota" />
   <textarea class="form-control" [(ngModel)]="nota.descripcion"></textarea>
