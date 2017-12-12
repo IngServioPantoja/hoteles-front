@@ -1,0 +1,32 @@
+.filtro-titulo{
+  color:#1e85ba;
+  display: block;
+  font-weight: 700;
+  margin: 2px 0px 15px 0px;
+}
+.filtro-titulo-principal{
+  margin: 5px 0px 5px 10px;
+  font-weight: 700;
+}
+.fondo-panel{
+  background: #f4f4f4;
+  margin: 20px 5px;
+}
+.btn-principal{
+  background: #002979;
+  color: white;
+}
+.listado-estrellas{
+  list-style: none;
+}
+.listado-estrellas .estrellas{
+  color: #ffc107;
+  margin: 5px 0px;
+}
+.panel-principal{
+  border: none;
+  padding: 15px 15px;
+  background: white;
+  margin: 2px 0px;
+  box-shadow: 2px 2px 0px #ccc;
+}

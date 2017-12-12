@@ -1,0 +1,11 @@
+#header{
+  background: #03387c;
+  height: 70px;
+}
+#header #logo{
+  margin: 10px 5px;
+}
+.btn-principal{
+  background: #002979;
+  color: white;
+}
