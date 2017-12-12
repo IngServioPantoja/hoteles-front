@@ -1,0 +1,11 @@
+.fondo-panel{
+  background: #f4f4f4;
+  margin: 20px 5px;
+}
+.panel-principal{
+  border: none;
+  padding: 15px 15px;
+  background: white;
+  margin: 2px 0px;
+  box-shadow: 2px 2px 0px #ccc;
+}
