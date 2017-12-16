@@ -1,6 +1,6 @@
-<section id="filtro" class="col-sm-4 seccion-hoteles">
-  <filtro-hoteles></filtro-hoteles>
+<section id="filtro" class="col-sm-3 seccion-hoteles">
+  <filtro-hoteles (buscar)="buscar($event)" #filtro></filtro-hoteles>
 </section>
-<section id="listado" class="col-sm-8 seccion-hoteles">
-  <listado-hoteles></listado-hoteles>
+<section id="listado" class="col-sm-9 seccion-hoteles">
+  <listado-hoteles #listado></listado-hoteles>
 </section>

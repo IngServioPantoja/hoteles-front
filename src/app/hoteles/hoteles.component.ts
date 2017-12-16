@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectorRef, ViewChild } from '@angular/core';
+import { HotelDto } from '../dto/hotelDto';
+import { FiltroDto } from '../dto/filtroDto';
+import { HotelService } from '../services/hotel.service';
 
 @Component({
   selector: 'hoteles',
@@ -7,7 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HotelesComponent implements OnInit {
 
-  constructor() { }
+  ref: ChangeDetectorRef;
+  @ViewChild('filtro') filtro;
+  @ViewChild('listado') listado;
+  constructor(ref: ChangeDetectorRef) {
+    this.ref = ref;
+
+  }
+
+  buscar(filtro:FiltroDto) {
+    console.log("buscando el filtrico");
+    this.listado.buscar(filtro);
+  }
 
   ngOnInit() {
   }

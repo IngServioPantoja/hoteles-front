@@ -1,11 +1,155 @@
-.fondo-panel{
+.btn-ver-hotel {
+  background: #002979;
+  color: white;
+  font-size: 20px;
+  margin: 10px auto;
+  width: 100%;
+}
+
+.costos {
+  margin: 10px 0px;
+}
+
+.estrellas {
+  color: #ffc107;
+  margin: 5px;
+}
+
+.fondo-panel {
   background: #f4f4f4;
   margin: 20px 5px;
 }
-.panel-principal{
+
+.item-titulo {
+  color: #1e85ba;
+  display: block;
+  font-weight: 700;
+  margin: 2px 0px 15px 0px;
+}
+
+.imagen-principal {
+  width: 100%;
+  max-height: 210px;
+  min-height: 200px;
+}
+
+.panel-principal {
   border: none;
   padding: 15px 15px;
   background: white;
   margin: 2px 0px;
   box-shadow: 2px 2px 0px #ccc;
+  min-height: 210px;
+}
+
+.precio {
+  font-size: 25px;
+  color: #f77f00;
+  font-weight: 900;
+  vertical-align: top;
+}
+
+.separador-vertical {
+  border: 0px;
+  border-right: 1px #cbcbcb;
+  width: 100%;
+  height: 200px;
+  right: 0px;
+  padding: 0px;
+  border-style: dashed;
+}
+
+.separador-orizontal {
+  border: 0px;
+  border-top: 1px #cbcbcb;
+  width: 100%;
+  height: 0px;
+  padding: 0px;
+  margin: 10px 0px;
+  border-style: dashed;
+}
+
+.moneda {
+  font-size: 20px;
+  color: #f77f00;
+  display: inline-block;
+  margin: 4px 5px 0px 0px;
+  vertical-align: top;
+}
+
+.icon {
+  display: inline-block;
+  text-indent: -9999px;
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px !important;
+  margin: 2px;
+}
+
+.icon-bathrobes {
+  background: url('../../../assets/icons/amenities/bathrobes.svg');
+}
+
+.icon-bathtub {
+  background: url('../../../assets/icons/amenities/bathtub.svg');
+}
+
+.icon-beach-pool-facilities {
+  background: url('../../../assets/icons/amenities/beach-pool-facilities.svg');
+}
+
+.icon-beach {
+  background: url('../../../assets/icons/amenities/beach.svg');
+}
+
+.icon-business-center {
+  background: url('../../../assets/icons/amenities/business-center.svg');
+}
+
+.icon-children-club {
+  background: url('../../../assets/icons/amenities/children-club.svg');
+}
+
+.icon-coffe-maker {
+  background: url('../../../assets/icons/amenities/coffe-maker.svg');
+}
+
+.icon-deep-soaking-bathtub {
+  background: url('../../../assets/icons/amenities/deep-soaking-bathtub.svg');
+}
+
+.icon-fitness-center {
+  background: url('../../../assets/icons/amenities/fitness-center.svg');
+}
+
+.icon-garden {
+  background: url('../../../assets/icons/amenities/garden.svg');
+}
+
+.icon-kitchen-facilities {
+  background: url('../../../assets/icons/amenities/kitchen-facilities.svg');
+}
+
+.icon-newspaper {
+  background: url('../../../assets/icons/amenities/newspaper.svg');
+}
+
+.icon-nightclub {
+  background: url('../../../assets/icons/amenities/nightclub.svg');
+}
+
+.icon-restaurant {
+  background: url('../../../assets/icons/amenities/restaurant.svg');
+}
+
+.icon-safety-box {
+  background: url('../../../assets/icons/amenities/safety-box.svg');
+}
+
+.icon-separate-bredroom {
+  background: url('../../../assets/icons/amenities/separate-bredroom.svg');
+}
+
+.icon-sheets {
+  background: url('../../../assets/icons/amenities/sheets.svg');
 }

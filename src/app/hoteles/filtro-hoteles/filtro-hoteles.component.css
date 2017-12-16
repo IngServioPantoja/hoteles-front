@@ -22,6 +22,7 @@
 .listado-estrellas .estrellas{
   color: #ffc107;
   margin: 5px 0px;
+  display: inline-block;
 }
 .panel-principal{
   border: none;

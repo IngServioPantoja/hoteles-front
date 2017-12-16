@@ -8,11 +8,12 @@ import { AppComponent } from './app.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { UsuariosListarComponent } from './usuarios/usuarios-listar/usuarios-listar.component';
 import { UsuariosDetallarComponent } from './usuarios/usuarios-detallar/usuarios-detallar.component';
-//Importando servicios
-import { UsuarioService } from './services/usuario.service';
 import { HotelesComponent } from './hoteles/hoteles.component';
 import { ListadoHotelesComponent } from './hoteles/listado-hoteles/listado-hoteles.component';
 import { FiltroHotelesComponent } from './hoteles/filtro-hoteles/filtro-hoteles.component';
+//Importando servicios
+import { UsuarioService } from './services/usuario.service';
+import { HotelService } from './services/hotel.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { FiltroHotelesComponent } from './hoteles/filtro-hoteles/filtro-hoteles.
     FormsModule,
     HttpModule
   ],
-  providers: [UsuarioService],
+  providers: [UsuarioService,HotelService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

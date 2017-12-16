@@ -9,11 +9,11 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12 col-sm-8">
-        <input type="text" class="form-control" placeholder="Ingrese el nombre del hotel">
+      <div class="col-sm-12 col-md-6">
+        <input type="text" class="form-control" placeholder="Ingrese el nombre del hotel" [(ngModel)]="filtro.name">
       </div>
-      <div class="col-xs-12 col-sm-4">
-        <button type="button" class="btn btn-principal form-control">Aceptar</button>
+      <div class="col-sm-12 col-md-6">
+        <button type="button" class="btn btn-principal form-control" (click)="buscarHoteles()">Aceptar</button>
       </div>
     </div>
   </div>
@@ -25,33 +25,13 @@
     </div>
     <div class="row">
       <ul class="listado-estrellas">
-        <li>
-          Todas las estrellas
-        </li>
-        <li class="estrellas">
-          <i class="glyphicon glyphicon-star"></i>
-          <i class="glyphicon glyphicon-star"></i>
-          <i class="glyphicon glyphicon-star"></i>
-          <i class="glyphicon glyphicon-star"></i>
-          <i class="glyphicon glyphicon-star"></i>
-        </li>
-        <li class="estrellas">
-          <i class="glyphicon glyphicon-star"></i>
-          <i class="glyphicon glyphicon-star"></i>
-          <i class="glyphicon glyphicon-star"></i>
-          <i class="glyphicon glyphicon-star"></i>
-        </li>
-        <li class="estrellas">
-          <i class="glyphicon glyphicon-star"></i>
-          <i class="glyphicon glyphicon-star"></i>
-          <i class="glyphicon glyphicon-star"></i>
-        </li>
-        <li class="estrellas">
-          <i class="glyphicon glyphicon-star"></i>
-          <i class="glyphicon glyphicon-star"></i>
-        </li>
-        <li class="estrellas">
-          <i class="glyphicon glyphicon-star"></i>
+        <li *ngFor="let estrella of filtro.estrellas">
+          <input type="checkbox" [checked]="estrella.activo" (click)="cambiarEstrellas(estrella)" *ngIf="estrella.cantidad == 'TODAS'">
+          <input type="checkbox" [checked]="estrella.activo" (change)="estrella.activo = !estrella.activo" *ngIf="estrella.cantidad != 'TODAS'">
+          <span *ngIf="estrella.cantidad == 'TODAS'">Todas las estrellas</span>
+          <div *ngFor="let star of [1,2,3,4,5]" class="estrellas">
+            <i class="glyphicon glyphicon-star" *ngIf="star <= estrella.cantidad"></i>
+          </div>
         </li>
       </ul>
     </div>

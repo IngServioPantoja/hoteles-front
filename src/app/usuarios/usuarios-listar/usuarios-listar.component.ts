@@ -15,16 +15,12 @@ export class UsuariosListarComponent implements OnInit {
 
   @Input() verDetalle;
 
-usuarioService: UsuarioService;ref:ChangeDetectorRef
+usuarioService: UsuarioService;
+ref:ChangeDetectorRef;
+
   constructor(usuarioService: UsuarioService,ref:ChangeDetectorRef) {
     this.usuarioService = usuarioService;
     this.ref=ref;
-//usuarioService.listar().subscribe(
-//res =>{
-//  this.lstUsuarios = res.json();
-//}
-//);
-
     usuarioService.listarPromesa().then(res  => {
       this.lstUsuarios = res.json();
     }).catch(
