@@ -10,8 +10,8 @@
             <span class="item-titulo">{{hotel.name}}</span>
           </div>
           <div class="col-xs-12">
-            <div class="estrellas">
-              <i class="glyphicon glyphicon-star" *ngFor="let i of listado(hotel.stars)"></i>
+            <div *ngFor="let star of [1,2,3,4,5]" class="estrellas">
+              <i class="glyphicon glyphicon-star" *ngIf="star <= hotel.stars"></i>
             </div>
           </div>
           <div class="col-xs-12">
