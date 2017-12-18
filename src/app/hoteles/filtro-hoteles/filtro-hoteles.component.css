@@ -19,11 +19,6 @@
 .listado-estrellas{
   list-style: none;
 }
-.listado-estrellas .estrellas{
-  color: #ffc107;
-  margin: 5px 0px;
-  display: inline-block;
-}
 .panel-principal{
   border: none;
   padding: 15px 15px;
