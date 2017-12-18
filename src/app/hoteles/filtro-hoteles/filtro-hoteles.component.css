@@ -10,7 +10,7 @@
 }
 .fondo-panel{
   background: #f4f4f4;
-  margin: 20px 5px;
+  margin: 10px 5px;
 }
 .btn-principal{
   background: #002979;
@@ -30,4 +30,6 @@
   background: white;
   margin: 2px 0px;
   box-shadow: 2px 2px 0px #ccc;
+  display: block;
+  width: 100%;
 }

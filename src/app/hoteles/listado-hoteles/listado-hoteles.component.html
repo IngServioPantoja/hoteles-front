@@ -1,7 +1,7 @@
-<div class="row fondo-panel" *ngIf="lstHoteles?.length < 1">
+<div class="fondo-panel" *ngIf="lstHoteles?.length < 1">
   <span class="no-registros">  No se han encontrado registros</span>
 </div>
-<div class="row fondo-panel" *ngIf="lstHoteles?.length > 0">
+<div class="fondo-panel" *ngIf="lstHoteles?.length > 0">
   <article class="col-ms-12 panel-principal" *ngFor="let hotel of lstHoteles">
     <div class="row">
       <div class="col-xs-12 col-sm-8">

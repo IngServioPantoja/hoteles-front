@@ -1,32 +1,78 @@
-<div class="row fondo-panel">
-  <div class="col-ms-12 panel-principal">
-    <span class="filtro-titulo-principal">Filtros</span>
-  </div>
-  <div class="col-sm-12 panel-principal">
-    <div class="row">
+<collapsible-list [type]="'accordion'" class="hidden-sm hidden-md hidden-lg col-xs-12 panel-principal">
+  <collapsible-list-item>
+    <collapsible-header class="waves-effect row">
+      <div class="col-xs-12">
+        <span class="filtro-titulo text-center">
+              Filtrar
+              <i class="glyphicon glyphicon-triangle-bottom pull-right"></i>
+          </span>
+      </div>
+    </collapsible-header>
+    <collapsible-body [expanded]="true" class="row">
       <div class="col-sm-12">
         <span class="filtro-titulo">
-          <i class="glyphicon glyphicon-search"></i> Nombre del hotel
-          <i class="glyphicon glyphicon-triangle-bottom pull-right"></i>
+              Nombre del hotel
         </span>
       </div>
-    </div>
-    <div class="row">
+      <div class="col-xs-12">
+        <input type="text" class="form-control" placeholder="Ingrese el nombre del hotel" [(ngModel)]="filtro.nombre">
+      </div>
+      <div class="col-xs-12">
+        <span class="filtro-titulo">Estrellas
+        </span>
+      </div>
+      <div class="col-xs-12">
+        <ul class="listado-estrellas">
+          <li *ngFor="let estrella of filtro.estrellas">
+            <input type="checkbox" [checked]="estrella.activo" (click)="cambiarEstrellas(estrella)" *ngIf="estrella.cantidad == 'TODAS'">
+            <input type="checkbox" [checked]="estrella.activo" (change)="estrella.activo = !estrella.activo" *ngIf="estrella.cantidad != 'TODAS'">
+            <span *ngIf="estrella.cantidad == 'TODAS'">Todas las estrellas</span>
+            <div *ngFor="let star of [1,2,3,4,5]" class="estrellas">
+              <i class="glyphicon glyphicon-star" *ngIf="star <= estrella.cantidad"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-xs-12">
+        <button type="button" class="btn btn-principal form-control" (click)="buscarHoteles()">Aceptar</button>
+      </div>
+    </collapsible-body>
+  </collapsible-list-item>
+</collapsible-list>
+
+
+<div class="hidden-xs col-ms-12 panel-principal">
+  <span class="filtro-titulo-principal">Filtros</span>
+</div>
+<collapsible-list [type]="'accordion'" class="hidden-xs col-sm-12 panel-principal">
+  <collapsible-list-item>
+    <collapsible-header class="waves-effect row">
+      <div class="col-sm-12">
+        <span class="filtro-titulo">
+              <i class="glyphicon glyphicon-search"></i> Nombre del hotel
+              <i class="glyphicon glyphicon-triangle-bottom pull-right"></i>
+            </span>
+      </div>
+    </collapsible-header>
+    <collapsible-body [expanded]="true" class="row">
       <div class="col-sm-12 col-md-6">
         <input type="text" class="form-control" placeholder="Ingrese el nombre del hotel" [(ngModel)]="filtro.nombre">
       </div>
       <div class="col-sm-12 col-md-6">
         <button type="button" class="btn btn-principal form-control" (click)="buscarHoteles()">Aceptar</button>
       </div>
-    </div>
-  </div>
-  <div class="col-xs-12 panel-principal">
-    <div class="row">
+    </collapsible-body>
+  </collapsible-list-item>
+</collapsible-list>
+<collapsible-list [type]="'accordion'" class="hidden-xs col-sm-12 panel-principal">
+  <collapsible-list-item>
+    <collapsible-header class="waves-effect row">
       <div class="col-sm-12">
-        <span class="filtro-titulo"><i class="glyphicon glyphicon-star"></i>Estrellas</span>
+        <span class="filtro-titulo"><i class="glyphicon glyphicon-star"></i>Estrellas
+          <i class="glyphicon glyphicon-triangle-bottom pull-right"></i></span>
       </div>
-    </div>
-    <div class="row">
+    </collapsible-header>
+    <collapsible-body [expanded]="true" class="row">
       <ul class="listado-estrellas">
         <li *ngFor="let estrella of filtro.estrellas">
           <input type="checkbox" [checked]="estrella.activo" (click)="cambiarEstrellas(estrella)" *ngIf="estrella.cantidad == 'TODAS'">
@@ -37,6 +83,6 @@
           </div>
         </li>
       </ul>
-    </div>
-  </div>
-</div>
+    </collapsible-body>
+  </collapsible-list-item>
+</collapsible-list>
