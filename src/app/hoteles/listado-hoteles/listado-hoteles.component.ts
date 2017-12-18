@@ -21,7 +21,7 @@ export class ListadoHotelesComponent implements OnInit {
       this.lstHoteles = res.json();
     }).catch(
 
-      )
+    );
   }
 
   buscar(filtro:FiltroDto){
@@ -30,7 +30,7 @@ export class ListadoHotelesComponent implements OnInit {
       this.lstHoteles = res.json();
     }).catch(
 
-      )
+    );
   }
 
   ngOnInit() {

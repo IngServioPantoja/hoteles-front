@@ -13,7 +13,8 @@ export class HotelService {
   constructor(private http: Http) {
   }
   listar(filtro:FiltroDto): Promise<any> {
-    return this.http.get(this.baseUrl).toPromise();
+    console.log("listar hoteles service");
+    return this.http.get(this.baseUrl+filtro.toParams()).toPromise();
   };
   crear(hotelDto:HotelDto): Observable<Response> {
     return this.http.post(this.baseUrl,hotelDto);

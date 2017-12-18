@@ -34,6 +34,18 @@
   min-height: 200px;
 }
 
+.no-registros {
+  margin: 0 auto;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  background: #03387c;
+  padding: 5px;
+  border-radius: 5px;
+}
+
 .panel-principal {
   border: none;
   padding: 15px 15px;
@@ -44,7 +56,7 @@
 }
 
 .precio {
-  font-size: 25px;
+  font-size: 30px;
   color: #f77f00;
   font-weight: 900;
   vertical-align: top;
@@ -74,7 +86,7 @@
   font-size: 20px;
   color: #f77f00;
   display: inline-block;
-  margin: 4px 5px 0px 0px;
+  margin: 9px 5px 0px 0px;
   vertical-align: top;
 }
 

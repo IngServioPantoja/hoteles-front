@@ -5,12 +5,15 @@
   <div class="col-sm-12 panel-principal">
     <div class="row">
       <div class="col-sm-12">
-        <span class="filtro-titulo"><i class="glyphicon glyphicon-search"></i> Nombre del hotel</span>
+        <span class="filtro-titulo">
+          <i class="glyphicon glyphicon-search"></i> Nombre del hotel
+          <i class="glyphicon glyphicon-triangle-bottom pull-right"></i>
+        </span>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-12 col-md-6">
-        <input type="text" class="form-control" placeholder="Ingrese el nombre del hotel" [(ngModel)]="filtro.name">
+        <input type="text" class="form-control" placeholder="Ingrese el nombre del hotel" [(ngModel)]="filtro.nombre">
       </div>
       <div class="col-sm-12 col-md-6">
         <button type="button" class="btn btn-principal form-control" (click)="buscarHoteles()">Aceptar</button>
